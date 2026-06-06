@@ -17,21 +17,14 @@ def main():
 				print(f"DifficultyFusion = {DifficultyFusion}")
 				
 				_= difficulty
-				#print(f"1.) {difficulty}")
 				difficulty = ""
-				#print(f"2.) {difficulty}")
-				#print(f"3.) _ = {_}")
 				
-				#taking = True
-			#elif c:
-				#print(f"DifficultyFusion + c = {DifficultyFusion}")
-				#c = False
-				#break
+				
 				
 			elif "cheats" in DifficultyFusion:
 				print("not implemeted yet!")
 				DifficultyFusion =[]
-			
+				break
 			elif difficulty == "easi":
 				secret_number  = randint(1, 3) 
 				taking = True
@@ -41,16 +34,9 @@ def main():
 			elif difficulty == "extrim":
 				secret_number  = randint(1,50) 
 				taking = True
-			elif difficulty or not difficulty:
+			else:
 				print("choose difficulty") 
 				break
-			
-			
-				 
-
-
-
-
 			if taking:
 				print(f"balanse:{mony_str}") 
 				number =input("enter yor nember:")

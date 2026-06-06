@@ -1,7 +1,6 @@
 from random import *
 from AzartClass import AzartClass
 def main():
-	DifficultyFusion = []
 	while True:
 		taking = False
 		mony = 100
