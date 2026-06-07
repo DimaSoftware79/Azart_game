@@ -1,5 +1,6 @@
 from random import *
 from AzartClass import AzartClass
+import pygame
 def main():
 	DifficultyFusion = []
 	while True:
