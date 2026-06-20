@@ -1,6 +1,11 @@
 from random import *
 from AzartClass import AzartClass
 
+def CleanScreen():
+        char = "\033[2J\033[H"  
+        return char
+
+
 def main():
 	DifficultyFusion = []
 	while True:
@@ -19,9 +24,7 @@ def main():
 				
 				_= difficulty
 				difficulty = ""
-				
-				
-				
+                                
 			elif "cheats" in DifficultyFusion:
 				print("not implemeted yet!")
 				DifficultyFusion =[]
@@ -39,22 +42,33 @@ def main():
 				print("choose difficulty") 
 				break
 			if taking:
-				print(f"balanse:{mony_str}") 
-				number =input("enter yor nember:")
-				if number.isdigit():
-					if int(number)  == secret_number:
-						mony += 10 
-						print ("you win $10") 
-					else:
-						mony -= 5
-						print("you lose mony $5")
-				elif number == "e":
-					exit()
-				elif number  == "menu":
-					break
-				elif number == "test":
-					print(Azart.main()) 
-				else:
-					print("it is not digit!") 
+                                # print(CleanScreen()) 
+                                print(f"balanse:{mony_str}") 
+                                number =input("enter yor nember:")
+                                if number.isdigit():
+                                        if int(number)  == secret_number:
+                                                print(CleanScreen())
+                                                mony += 10 
+                                                print ("you win $10")
+                                        else:
+                                                print(CleanScreen())
+                                                mony -= 5
+                                                print("you lose mony $5")
+                                elif number == "e":
+                                        exit()
+                                elif number  == "menu":
+                                        break
+                                elif number == "test":
+                                        print(CleanScreen())
+                                        result = Azart.main(mony)
+                                        # print (f"DEBUG: now success is {result[1]} need be True, now nwe_mony is {result[0]}: ")
+
+                                        if result[1]:
+                                                print ("you need to repay your bank loan!")
+                                                mony = result[0]
+                                                
+                                        print(mony)
+                                else:
+                                        print("it is not digit!") 
 
 main()
